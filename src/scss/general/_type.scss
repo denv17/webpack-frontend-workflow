@@ -1,0 +1,97 @@
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $headings-color;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  margin-bottom: $headings-margin-bottom;
+}
+
+h1,
+.h1 {
+  font-size: $h1-font-size;
+}
+
+h2,
+.h2 {
+  font-size: $h2-font-size;
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size;
+}
+
+h4,
+.h4 {
+  font-size: $h4-font-size;
+}
+
+h5,
+.h5 {
+  font-size: $h5-font-size;
+}
+
+h6,
+.h6 {
+  font-size: $h6-font-size;
+}
+
+// Horizontal rules
+hr {
+  border: none;
+  border-top: $hr-border-width solid $hr-border-color;
+  margin-bottom: $hr-margin-y;
+  margin-top: $hr-margin-y;
+}
+
+// Emphasis
+small,
+.small {
+  font-size: $small-font-size;
+  font-weight: $font-weight-normal;
+}
+
+mark,
+.mark {
+  background-color: $mark-bg;
+  padding: $mark-padding;
+}
+
+// Lists
+.list-unstyled {
+  @include list-unstyled;
+}
+
+.list-inline {
+  @include list-unstyled;
+}
+
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
+}
+
+// Font sizes
+$f-start: 9;
+$f-end: 80;
+
+@for $i from $f-start through $f-end {
+  .font-size-#{$i} {
+    font-size: #{$i * 1px} !important;
+  }
+}

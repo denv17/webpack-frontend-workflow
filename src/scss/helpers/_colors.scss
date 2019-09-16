@@ -1,0 +1,11 @@
+@each $color, $value in $colors {
+  .c-#{$color} {
+    color: $value;
+  }
+}
+
+@each $gray, $value in $grays {
+  .c-gray-#{$gray} {
+    color: $value;
+  }
+}
