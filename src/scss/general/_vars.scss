@@ -4,9 +4,9 @@ $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
 $gray-400: #ced4da;
-$gray-500: #adb5bd;
+$gray-500: #808aab;
 $gray-600: #6c757d;
-$gray-700: #495057;
+$gray-700: #3d4c7e;
 $gray-800: #343a40;
 $gray-900: #212529;
 $black:    #000;
@@ -28,15 +28,16 @@ $grays: map-merge(
 );
 
 $blue:      #007bff;
-$indigo:    #6610f2;
-$purple:    #6f42c1;
+$indigo:    #001a72;
+$purple:    #7637e3;
+$purple2:   #6638b2;
 $pink:      #e83e8c;
 $red:       #dc3545;
 $orange:    #fd7e14;
 $yellow:    #ffc107;
 $green:     #28a745;
 $teal:      #20c997;
-$cyan:      #17a2b8;
+$cyan:      #58b4ff;
 $transparent: transparent;
 
 $colors: ();
@@ -45,6 +46,7 @@ $colors: map-merge(
     "blue":         $blue,
     "indigo":       $indigo,
     "purple":       $purple,
+    "purple2":       $purple2,
     "pink":         $pink,
     "red":          $red,
     "orange":       $orange,
@@ -61,8 +63,8 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue;
-$secondary:     $gray-600;
+$primary:       $purple;
+$secondary:     $indigo;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
@@ -215,7 +217,7 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mon
 $font-family-base: $font-family-roboto, sans-serif;
 $font-family-text: $font-family-roboto, sans-serif;
 
-$font-size-base: 13px;
+$font-size-base: 16px;
 $font-size-lg: $font-size-base * 1.25;
 $font-size-sm: $font-size-base * 0.875;
 
@@ -227,7 +229,7 @@ $font-weight-bold: 700;
 $font-weight-bolder: 700;
 
 $font-weight-base: $font-weight-normal;
-$line-height-base: 1.5;
+$line-height-base: 1.4;
 
 $h1-font-size: 30px;
 $h2-font-size: $font-size-base * 2;
@@ -259,16 +261,26 @@ $mark-bg: #fcf8e3;
 $hr-margin-y: $spacer;
 
 // Icons
-$icons-font-family: 'BanBinf-Icons';
+$icons-font-family: 'icomoon';
 
-$bbie-angle-down: '\e900';
+$icon-angle-down: '\e903';
+$icon-angle-left: '\e904';
+$icon-angle-up: '\e902';
+$icon-angle-right: '\e905';
+$icon-plus: '\e900';
+$icon-check: '\e901';
 
-$bbie-icons: (
-  angle-down: $bbie-angle-down,
+$icon-icons: (
+  angle-down: $icon-angle-down,
+  angle-left: $icon-angle-left,
+  angle-up: $icon-angle-up,
+  angle-right: $icon-angle-right,
+  plus: $icon-plus,
+  check: $icon-check,
 );
 
 // Tables
-$table-cell-padding: 0.75rem 10px;
+$table-cell-padding: 5px 10px;
 $table-cell-padding-sm: 0.3rem;
 
 $table-color: $body-color;

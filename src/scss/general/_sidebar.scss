@@ -1,0 +1,13 @@
+.sidebar {
+  width: 178px;
+  box-shadow: $box-shadow;
+  background-color: $white;
+
+  &-header {
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $gray-300;
+  }
+}

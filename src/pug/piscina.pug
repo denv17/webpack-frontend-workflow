@@ -16,132 +16,77 @@ html(lang="en")
       article.sidebar-body
         .switch-wrapper
           label.switch
-            input(type="checkbox")
+            input(type="checkbox", checked)
             span
-          .switch-text
+          .switch-text.active
             span Ver por fecha
             span Ver por piscina
 
         table.table
           thead
             tr
-              th.text-center Piscina
+              th.text-center Fecha
               th.text-center Ciclo
           tbody
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 01
-                  i.icon-angle-right
+              td.text-center 24/08/19
               td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 02
-                  i.icon-angle-right
-              td.text-center Día 2
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 03
-                  i.icon-angle-right
-              td.text-center Día 3
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 04
-                  i.icon-angle-right
-              td.text-center Día 4
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 05
-                  i.icon-angle-right
-              td.text-center Día 5
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 06
-                  i.icon-angle-right
-              td.text-center
-                span.tag Vacío
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 07
-                  i.icon-angle-right
-              td.text-center Día 7
-            tr.active
-              td
-                button.btn.btn-outline-secondary.active
-                  | 08
-                  i.icon-angle-right
-              td.text-center Día 8
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 09
-                  i.icon-angle-right
-              td.text-center Día 9
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 10
-                  i.icon-angle-right
-              td.text-center Día 10
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 11
-                  i.icon-angle-right
-              td.text-center Día 11
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 12
-                  i.icon-angle-right
-              td.text-center Día 12
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 13
-                  i.icon-angle-right
-              td.text-center Día 13
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 14
-                  i.icon-angle-right
-              td.text-center Día 14
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 15
-                  i.icon-angle-right
-              td.text-center Día 15
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 16
-                  i.icon-angle-right
-              td.text-center Día 16
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 17
-                  i.icon-angle-right
-              td.text-center Día 17
+              td.text-center 24/08/19
+              td.text-center Día 1
             tr
-              td
-                button.btn.btn-outline-secondary
-                  | 18
-                  i.icon-angle-right
-              td.text-center Día 18
+              td.text-center 24/08/19
+              td.text-center Día 1
+            tr
+              td.text-center 24/08/19
+              td.text-center Día 1
 
     main.main
-      header.main-header.main-header--date
-        button.dropdown-lg.dropdown-lg--date
-          | 28/08/19 (Hoy)
+      header.main-header.main-header--pis
+        button.dropdown-lg.dropdown-lg--pis
+          | Piscina 01
           i.icon-angle-down
           .dropdown-lg-decoration
             svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewbox='0 0 418 96' style='enable-background:new 0 0 418 96;' xml:space='preserve')
@@ -412,7 +357,7 @@ html(lang="en")
                       .input.input--light
                         input(type="text" value="-")
                         span
-                  tr.active
+                  tr
                     td
                       .input
                         input(type="text")
@@ -787,7 +732,6 @@ html(lang="en")
                             | Alcalinidad
                             span.checkbox-mark
                     button.btn.btn-secondary.btn-md.w-100 Aceptar
-
               table.table
                 thead
                   tr
@@ -915,7 +859,7 @@ html(lang="en")
                       .input
                         input(type="text", value="")
                         span ºC
-                  tr.active
+                  tr
                     td
                       .input
                         input(type="text", value="")

@@ -1,0 +1,71 @@
+// sass-lint:disable-all
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out;
+// sass-lint:enable-all
+
+.btn {
+  align-items: center;
+  background-color: transparent;
+  border: $border-width solid $transparent;
+  border-radius: 20px;
+  color: $body-color;
+  display: inline-flex;
+  font-size: 16px;
+  justify-content: center;
+  min-height: 32px;
+  padding: 5px 15px;
+  text-align: center;
+  transition: $btn-transition;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 2px rgba($body-color, 0.25);
+    outline: 0;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    box-shadow: none;
+    opacity: 0.45;
+  }
+
+  @each $key, $value in $theme-colors {
+    &-#{$key} {
+      @if $key == light {
+        @include button($value, $dark);
+      }
+
+      @else {
+        @include button($value, $white);
+      }
+    }
+  }
+
+  @each $key, $value in $theme-colors {
+    &-outline-#{$key} {
+      @include button-outline($value, $white);
+    }
+  }
+
+  // With icon
+  i {
+    font-size: 18px;
+    line-height: 0;
+    margin-left: 10px;
+  }
+
+  // Sizes
+  &-md {
+    padding: 12px 40px;
+    border-radius: 25px;
+  }
+}

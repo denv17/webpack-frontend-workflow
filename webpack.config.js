@@ -1,6 +1,17 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");4
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+var htmlTemplates = [
+  'piscina',
+];
+
+var multipleFiles = htmlTemplates.map(name => {
+  return new HtmlWebPackPlugin({
+    filename: "./" + name + ".html",
+    template: "./src/pug/" + name + ".pug"
+  });
+});
 
 module.exports = {
   module: {
@@ -74,5 +85,5 @@ module.exports = {
       filename: "./css/[name].css",
       chunkFilename: "[id].css"
     })
-  ]
+  ].concat(multipleFiles)
 };

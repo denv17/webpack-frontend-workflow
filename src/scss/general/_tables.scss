@@ -5,19 +5,30 @@
 .table {
   width: 100%;
   margin-bottom: $spacer;
-  color: $table-color;
+  color: $secondary;
   background-color: $table-bg;
 
   th,
   td {
     padding: $table-cell-padding;
-    vertical-align: top;
-    border-top: $table-border-width solid $table-border-color;
+    vertical-align: middle;
+  }
+
+  tr {
+    &.active {
+      background-color: $gray-200;
+    }
   }
 
   thead th {
-    vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    font-size: 14px;
+    font-weight: $font-weight-normal;
+    border-bottom: $table-border-width solid $table-border-color;
+    height: 50px;
+  }
+
+  tbody td {
+    height: 44px;
   }
 
   tbody + tbody {

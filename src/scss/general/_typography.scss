@@ -1,20 +1,5 @@
 /** Some family fonts */
-// sass-lint:disable-all
-@each $font-family, $font-suffix, $font-weight in (Roboto, Light, 300), (Roboto, Regular, 400), (Roboto, Bold, 700) {
-  @font-face {
-    font-family: '#{$font-family}';
-    src: url('#{$font-path}/#{$font-family}-#{$font-suffix}.eot');
-    src:
-      url('#{$font-path}/#{$font-family}-#{$font-suffix}.eot?#iefix') format('embedded-opentype'),
-      url('#{$font-path}/#{$font-family}-#{$font-suffix}.woff2') format('woff2'),
-      url('#{$font-path}/#{$font-family}-#{$font-suffix}.woff') format('woff'),
-      url('#{$font-path}/#{$font-family}-#{$font-suffix}.ttf') format('truetype'),
-      url('#{$font-path}/#{$font-family}-#{$font-suffix}.svg##{$font-family}-#{$font-suffix}') format('svg');
-    font-weight: #{$font-weight};
-    font-style: normal;
-  }
-}
-// sass-lint:enable-all
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&display=swap');
 
 // Icons
 @font-face {
@@ -31,8 +16,8 @@
   // sass-lint:enable-all
 }
 
-[class^='bbie-'],
-[class*=' bbie-'] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   // sass-lint:disable-all
   font-family: '#{$icons-font-family}' !important;
@@ -49,10 +34,10 @@
   // sass-lint:enable-all
 }
 
-@each $bbie-icon in map-keys($bbie-icons) {
-  .bbie-#{$bbie-icon} {
+@each $icon-icon in map-keys($icon-icons) {
+  .icon-#{$icon-icon} {
     &::before {
-      content: map-get($bbie-icons, $bbie-icon);
+      content: map-get($icon-icons, $icon-icon);
     }
   }
 }
